@@ -1,0 +1,6 @@
+node('MyWindowsSlaveNode1'){
+    git branch: 'JenkinsDemo-B1', url: 'https://github.com/kuldeep-g/JenkinsDemo.git'
+    tool name: 'MSBuild v14', type: 'hudson.plugins.msbuild.MsBuildInstallation'
+    step([$class: 'WarningsPublisher', canComputeNew: false, canResolveRelativePaths: false, consoleParsers: [[parserName: 'MSBuild']], defaultEncoding: '', excludePattern: '', healthy: '', includePattern: '', messagesPattern: '', unHealthy: ''])
+
+}
